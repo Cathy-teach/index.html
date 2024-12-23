@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语学习中心</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        section {
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .card {
+            background: white;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #4caf50;
+            color: white;
+            margin-top: 2rem;
+        }
+        input[type="file"], input[type="submit"] {
+            display: block;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>欢迎来到英语学习中心</h1>
+        <p>学习、练习、进步！</p >
+    </header>
+
+    <nav>
+        资源中心
+        每周音频上传
+        联系我们
+    </nav>
+
+    <section id="resources" class="container">
+        <h2>教学资源</h2>
+        <div class="card">
+            <h3>电子书</h3>
+            <p>下载实用的电子书，帮助提升您的英语能力。</p >
+            <a href="ebooks/sample-ebook.pdf" download>下载示例电子书</a >
+        </div>
+        <div class="card">
+            <h3>音频课程</h3>
+            <p>聆听练习音频，完善您的发音技巧。</p >
+            <a href="audio/sample-audio.mp3" download>下载示例音频</a >
+        </div>
+    </section>
+
+    <section id="upload" class="container">
+        <h2>每周阅读音频上传</h2>
+        <p>提交您的阅读音频，我们将提供反馈。</p >
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="audio-upload">选择音频文件：</label>
+            <input type="file" id="audio-upload" name="audio" accept="audio/*" required>
+            <input type="submit" value="上传">
+        </form>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>联系我们</h2>
+        <p>如有任何问题，请随时与我们联系！</p >
+        <p>邮箱：</p >
+    </section>
+
+    <footer>
+        <p>© 2024 英语学习中心 版权所有。</p >
+    </footer>
+</body>
+</html>
